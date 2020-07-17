@@ -11,3 +11,4 @@ public class PpmfullstackApplication {
     }
 
 }
+//jdbc:mysql://ppmtoolserver.mysql.database.azure.com:3306/ppmt?serverTimezone=UTC&useLegacyDatetimeCode=false
