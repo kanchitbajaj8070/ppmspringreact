@@ -24,7 +24,6 @@ import java.util.Map;
 import static com.example.ppmfullstack.security.SecurityConstants.TOKEN_PREFIX;
 
 @RestController
-@RequestMapping("/api/users")
 @CrossOrigin
 public class UserController {
     @Autowired
@@ -38,7 +37,7 @@ public class UserController {
     @Autowired
     private ValidationService validationService;
 
-    @PostMapping("/login")
+    @PostMapping("/api/users/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest,
                                               BindingResult result)
     {
@@ -56,7 +55,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/register")
+    @PostMapping("/api/users/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody User user, BindingResult result)
     {
         userValidator.validate(user,result);
